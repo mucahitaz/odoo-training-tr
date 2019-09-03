@@ -6,9 +6,9 @@
  'category': 'ID Management',
  'version': '12.0.1.0.0',
  'license': 'AGPL-3',
- 'depends': ['base','hr'],
+ 'depends': ['base'],
  'data': ['views/aeronix_view.xml',
           'security/ir.model.access.csv'
 
  ],
- 'development_status': 'Beta',}
+ 'demo':['data/aeronix_data.xml']}

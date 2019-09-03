@@ -1,0 +1,15 @@
+<odoo noupdate="0">
+
+    <record id ="standard_demo"
+            model="res.partner">
+        <field name="name">idil</field>
+    </record>
+
+    <record id="employee_data"
+            model="aeronix">
+        <field name="name" eval="ref('standard_demo')"/>
+        <field name="id_status">id</field>
+        <field name="id_number">1234</field>
+    </record>
+
+</odoo>
