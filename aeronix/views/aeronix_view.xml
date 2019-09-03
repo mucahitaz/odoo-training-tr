@@ -1,0 +1,26 @@
+<odoo>
+    <record id="aeronix_view_list" model='ir.ui.view'>
+        <field name="name">Aeronix</field>
+        <field name="model">aeronix</field>
+        <field name="arch" type="xml">
+            <tree string="aeronix">
+                <field name="name"/>
+                <field name="id_status"/>
+                <field name="id_number"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="aeronix" model="ir.actions.act_window">
+        <field name="name">Aeronix</field>
+        <field name="res_model">aeronix</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            name="Aeronix"
+            id="aeronix_menu"
+            sequence="5"
+            action="aeronix"/>
+
+</odoo>
