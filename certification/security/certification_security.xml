@@ -8,6 +8,7 @@
         <field name="name">Certification User</field>
         <field name="category_id" ref="module_category_certification"/>
     </record>
+
     <record id="group_certification_manager" model="res.groups">
         <field name="name">Certification Manager</field>
         <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>

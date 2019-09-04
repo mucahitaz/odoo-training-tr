@@ -9,10 +9,14 @@
  'data': [
  'security/certification_security.xml',
  'security/ir.model.access.csv',
+ 'reports/certification_report.xml',
+ 'reports/certification_template_pdf.xml',
+ 'reports/report_certification_pdf.xml',
  'views/certification_view.xml',
  'views/standards_view.xml',
  'views/res_partner_view.xml',
  'views/certification_bodies.xml',
+
 
  ],
  'demo':['data/certification_demo.xml'],
