@@ -1,2 +1,2 @@
-from . import role
 from . import talent
+from . import role

@@ -4,5 +4,8 @@ class Role(models.Model):
     _name="role"
     _description = "Roles"
 
-    name = fields.Text(string="Role Name")
-    description = fields.Text(string="Role Description")
+    name = fields.Selection([
+        ('engineer', 'Engineer'),
+        ('manager', 'Manager'),
+        ('technician', 'Technician')
+    ], )
