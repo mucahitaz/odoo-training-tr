@@ -1,10 +1,10 @@
 from odoo import fields,models
 
-class Role(models.Model):
-    _name="role"
-    _description = "Roles"
+class HrEmployee(models.Model):
+    _inherit="hr.employee"
 
-    name = fields.Selection([
+
+    role_name = fields.Selection([
         ('engineer', 'Engineer'),
         ('manager', 'Manager'),
         ('technician', 'Technician')

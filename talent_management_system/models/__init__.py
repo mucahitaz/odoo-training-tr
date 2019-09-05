@@ -1,2 +1,2 @@
 from . import talent
-from . import role
+from . import hr_employee
