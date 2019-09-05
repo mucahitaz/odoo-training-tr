@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="role_view_list" model="ir.ui.view">
+        <field name="name">Roles</field>
+        <field name="model">role</field>
+        <field name="arch" type="xml">
+            <tree string="Role">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="role_form" model="ir.ui.view">
+        <field name="name">Standards</field>
+        <field name="model">role</field>
+        <field name="arch" type="xml">
+            <form string="Role">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="open_role" model="ir.actions.act_window">
+        <field name="name">Roles</field>
+        <field name="res_model">role</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+            id="role"
+            parent="talent_menu"
+            sequence="5"
+            action="open_role"/>
+</odoo>
