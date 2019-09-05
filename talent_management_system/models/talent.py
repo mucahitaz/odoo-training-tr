@@ -12,12 +12,16 @@ class Talent(models.Model):
     date_started = fields.Date()
     levels = fields.Integer(compute='_compute_experience_days')
     experience = fields.Integer(compute='_compute_experience_days')
+    skill_name = fields.Selection([('java','Java'),
+                                   ('python','Python')])
+    skill_level = fields.Selection([('beginner','Beginner'),
+                                   ('experienced','Experienced')])
 
     @api.onchange('name')
     def _onchange_email(self):
         self.email = self.name.work_email
         self.d_name = self.name.department_id
-        self.role_name = self.name.role_name
+        self.role_name = self.name.job_id.name
 
     @api.depends('date_started')
     def _compute_experience_days(self):
@@ -30,5 +34,3 @@ class Talent(models.Model):
                 self.experience = 0
             else:
                 self.levels = 1
-
-

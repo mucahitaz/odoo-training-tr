@@ -10,6 +10,6 @@
  'data': [
  'security/ir.model.access.csv',
  'views/talent_view.xml',
- 'views/role_view.xml'
+ # 'views/role_view.xml'
  ]
 }

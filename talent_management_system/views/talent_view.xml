@@ -5,7 +5,6 @@
         <field name="model">talent</field>
         <field name="arch" type="xml">
             <tree string="Talent">
-                <field name="id"/>
                 <field name="name"/>
                 <field name="d_name"/>
                 <field name="email"/>
@@ -20,16 +19,25 @@
         <field name="arch" type="xml">
             <form string="Talent">
                 <sheet>
-                    <group>
-                        <field name="id"/>
-                        <field name="name"/>
-                        <field name="d_name"/>
-                        <field name="email"/>
-                        <field name="role_name"/>
-                        <field name="date_started"/>
-                        <field name="levels"/>
-                        <field name="experience"/>
-                    </group>
+                    <notebook>
+                        <page name="public" string="Work Information">
+                            <group>
+                                <field name="name"/>
+                                <field name="d_name"/>
+                                <field name="email"/>
+                                <field name="role_name"/>
+                                <field name="date_started"/>
+                                <field name="levels"/>
+                                <field name="experience"/>
+                            </group>
+                        </page>
+                        <page name="public" string="Skills">
+                            <group>
+                                <field name="skill_name"/>
+                                <field name="skill_level"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -47,6 +55,8 @@
         <field name="res_model">talent</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+
 
 
     <menuitem
