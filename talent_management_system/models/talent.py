@@ -6,5 +6,5 @@ class Talent(models.Model):
 
     id = fields.Many2one("hr.employee")
     name = fields.Many2one("hr.employee")
-    d_name = fields.Many2one("hr.department")
+    d_name = fields.Many2one("hr.department" , "department_id")
     email = fields.Many2one("hr.employee")
